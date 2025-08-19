@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        {% if error_message %}
+            <p style="color: red; font-weight: bold;">{{ error_message }}</p>
+        {% endif %}
+
+        <div class="clue-container">
+            <p><strong>Note:</strong> The username and password are based on the Marvel MCU.</p>
+            
+            <p><strong>Clue for Username:</strong></p>
+            <ul>
+                <li> - Cosmic entity, first seen in 2022, tasked with multiversal judgment.</li>
+                <li> - Use underscores, maybe even a dash which ends with a year.</li>
+            </ul>
+            
+            <p><strong>Clue for Password:</strong></p>
+            <ul>
+                <li> - Inspired by a wifi-password/mantra from Doctor Strange.</li>
+                <li> - Letters may be swapped with numbers or special characters (similar to the letters).</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
